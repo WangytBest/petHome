@@ -1,0 +1,40 @@
+@charset "UTF-8";
+body {
+    //background-color: #f3f3f4;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+span,i,em,s{
+    display: inline-block;
+}
+input{
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+textarea{
+    resize: none;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+.clearfix {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility:hidden
+      }
+  display: inline-block;
+  * html & {height:1%}
+  display:block;
+  *+html &{min-height:1%}
+}
+.loading {
+  width: 100%;
+  height: 1.8rem;
+  background-image: url(//misc.360buyimg.com/channel/lib/1.2.0/css/i/lazyload.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

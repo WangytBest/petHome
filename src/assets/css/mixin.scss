@@ -1,0 +1,137 @@
+$red: #954140;
+$font-st:simsun,Hiragino Sans GB;
+$font-yahei: PingFangSC-Regular,tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+
+/* 一像素细线border-top-bottom */
+
+@mixin border-bottom-1px($color) {
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: $color;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        pointer-events: none;
+    }
+}
+
+@mixin border-top-1px($color) {
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 1px;
+        background-color: $color;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        pointer-events: none;
+    }
+}
+
+/*四边*/
+@mixin bd-all-1px($bStyle,$color,$radius){
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border: 1px $bStyle $color;
+    border-radius: $radius;
+  }
+}
+
+@mixin box{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+}
+/* 水平排列 */
+@mixin box-horizontal{
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+    box-orient:horizontal;
+}
+/* 垂直排列 */
+@mixin box-vertical{
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+    box-orient:vertical;
+}
+
+/* 平均分配 */
+@mixin flex($order){
+    -ms-flex: $order;
+    -webkit-box-flex: $order;
+    -webkit-flex: $order;
+    flex: $order;
+}
+/* 自定义宽度 */
+@mixin auto-flex{
+    -webkit-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+/* 垂直居中 */
+@mixin vertical-center{
+    box-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items:center;
+    -webkit-align-items:center;
+
+}
+/* 垂直靠上 */
+@mixin vertical-top{
+    box-align: start;
+    -webkit-box-align: start;
+    -ms-flex-align:  start;
+    align-items:flex-start;
+    -webkit-align-items:flex-start;
+
+}
+/* 水平居中 */
+@mixin horizontal-center{
+    box-pack: center;
+    -webkit-box-pack: center;
+    justify-content:center;
+    -webkit-justify-content:center;
+}
+/* 两边对齐 */
+@mixin both-side{
+    box-pack: start;
+    -webkit-box-pack: start;
+    justify-content:space-between;
+    -webkit-justify-content:space-between;
+}
+/* 换行 */
+@mixin wrap{
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+
+}
+@mixin sl{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}

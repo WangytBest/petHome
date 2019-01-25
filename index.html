@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- iPhone X 适配 -->
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <title>宠Ta</title>
+    <script type="text/javascript" src="//misc.360buyimg.com/m/pethome/js/jssdk.min.js"></script>
+    <script type="text/javascript">
+        var deviceWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        if(deviceWidth > 750) {
+            deviceWidth = 750;
+        }
+        var deviceHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        var rootFontSize = (deviceWidth / 7.5).toFixed(2);
+        document.documentElement.style.fontSize = rootFontSize  + 'px';
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
